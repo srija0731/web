@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Reminders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Include header and menu -->
+    <!--#include virtual="header.html" -->
+    <!--#include virtual="menu.html" -->
+    
+    <h2>Search Reminders</h2>
+    <form action="SearchServlet" method="get" onsubmit="return validateSearch()">
+        <input type="text" name="searchTerm" id="searchTerm" placeholder="Enter title or date" required>
+        <input type="submit" value="Search">
+    </form>
+    
+    <script>
+        function validateSearch() {
+            var term = document.getElementById('searchTerm').value;
+            if(term === "") {
+                alert("Please enter a search term");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    
+    <!-- Results will be shown here -->
+    <div id="searchResults"></div>
+    
+    <!-- Include footer -->
+    <!--#include virtual="footer.html" -->
+</body>
+</html>

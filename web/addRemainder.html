@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Reminder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Include header and menu -->
+    <!--#include virtual="header.html" -->
+    <!--#include virtual="menu.html" -->
+    
+    <h2>Add a New Reminder</h2>
+    <form action="ReminderServlet" method="post" onsubmit="return validateReminder()">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required><br><br>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br><br>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required><br><br>
+        <input type="submit" value="Add Reminder">
+    </form>
+    
+    <script>
+        function validateReminder() {
+            // Add validation if needed
+            return true;
+        }
+    </script>
+    
+    <!-- Include footer -->
+    <!--#include virtual="footer.html" -->
+</body>
+</html>
