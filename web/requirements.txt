@@ -1,0 +1,31 @@
+# Core web framework
+Flask==3.0.0          # or Django==5.0.1 if using Django
+
+# Database & ORM
+SQLAlchemy==2.0.25    # ORM for relational databases
+psycopg2==2.9.9       # PostgreSQL driver (use mysqlclient or pymongo if different DB)
+
+# Authentication & Security
+Flask-Login==0.6.3    # User session management
+Flask-Bcrypt==1.0.1   # Password hashing
+python-dotenv==1.0.1  # Environment variable management
+
+# Scheduling & Reminders
+APScheduler==3.10.4   # Task scheduling for reminders
+celery==5.3.6         # Distributed task queue (optional if reminders need async)
+
+# API & Forms
+Flask-WTF==1.2.1      # Form handling
+requests==2.32.3      # API calls
+
+# Frontend Helpers
+Jinja2==3.1.4         # Template engine
+Bootstrap-Flask==2.5.0 # Bootstrap integration (optional)
+
+# Testing
+pytest==8.0.0
+coverage==7.4.0
+
+# Deployment
+gunicorn==21.2.0      # WSGI server for production
+
